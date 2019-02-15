@@ -15,11 +15,10 @@ def find_maxima(array):\
 	find_maxima([1,2,1]) \'97> [0,1]\
 	find_maxima([2,0,0,-2,2]) \'97> [0,4]\
 	\'93\'94\'94\
+	ans = []\
+    	for i in range(len(array)):\
+        		if (array[i] > array[i-1] and array[i] > array[i+1]):\
+            	ans.append(i)\
 	\
-	max_val=max(array)\
-	position=list.index(max_val)\
-	\
-	return position\
-\
-find_maxima([1,2,1]) \
-find_maxima([2,0,0,-2,2])}
+	return ans\
+}
